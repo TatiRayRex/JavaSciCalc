@@ -1,5 +1,7 @@
 package com.zipcodewilmington.scientific_calculator;
 
+import com.zipcodewilmington.scientificcalculator.Factorial;
+//import com.zipcodewilmington.scientificcalculator.MainApplication;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -153,7 +155,20 @@ public class SciCalcTest { //first brace
 
     // end code to try out degrees
 
-// need to add the Factorial after Ray is finished the code
+    @Test
+    public void testFactorial() {
+        //Given
+        Calculator calculator = new Calculator();
+        double num1 = 3;
+        double expectedValue = 6;
+
+        //When
+        double actualValue = Factorial.factorial(num1);
+
+        //Then
+        Assert.assertEquals(expectedValue, actualValue,.001);
+        System.out.println(expectedValue);
+    }   // ends factorial
 
 } //final brace
 
